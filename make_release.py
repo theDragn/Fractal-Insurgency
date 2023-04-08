@@ -1,12 +1,15 @@
-import shutil
+import shutil, pathlib
 
-src = "C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Fractal Insurgency"
-dest = "C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Fractal Insurgency\\temp\Fractal Insurgency"
-toIgnore = shutil.ignore_patterns('*.gitignore', '.idea', '.run', 'out', 'src', '*.iml','*.py','*.md')
+curdir = str(pathlib.Path(__file__).parent.resolve())
+modname = "Fractal Insurgency"
+
+src = curdir
+temp = curdir + "\\temp\\" + modname
+toIgnore = shutil.ignore_patterns('*.gitignore', '.idea', '.run', 'out', 'src', '*.iml','*.py','*.md','.git','temp')
 print("\nDid you update the version number in BOTH the mod_info and the .version?\n")
 print("Copying to temp directory...")
-shutil.copytree(src, dest, ignore = toIgnore)
+shutil.copytree(src, temp, ignore = toIgnore)
 print("Creating .zip...")
-shutil.make_archive('Fractal_Insurgency_v###', 'zip', dest)
+shutil.make_archive(modname + '_v###', 'zip', temp)
 print("Deleting temp directory...")
-shutil.rmtree(dest)
+shutil.rmtree(curdir + "\\temp")
