@@ -8,7 +8,7 @@ public class FractalModPlugin extends BaseModPlugin {
         super.onApplicationLoad();
 
         // Test that the .jar is loaded and working, using the most obnoxious way possible.
-        throw new RuntimeException("Template mod loaded! Remove this crash in FractalModPlugin.");
+        //throw new RuntimeException("Template mod loaded! Remove this crash in FractalModPlugin.");
     }
 
     @Override

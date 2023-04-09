@@ -1,0 +1,66 @@
+Name: Fractal Insurgency
+Lore deal: long-running pre-collapse anti-domain action
+General deal: Lowtech ballistic broadsiders. Armor. Emphasis on pseudorandom effects and recursion.
+Aesthetics: chunky, gunmetal-blue angular plating, red accents- lots of 30 and 60deg angles (sorry gwyv). Unplated parts are lowtechish, coppery.
+
+A fragmentented alliance of rebels, the Insurgency is nearly as old as the Domain's imperial ambitions. Made up in equal parts of the remnants of militaries from conquered star systems, anarchists, and anyone else with a bone to pick with the Domain, the Insurgency unsuccessfully sought to destroy the Domain in its entirety for millenia. With the collapse of the gate network and the apparent dissolution of the Domain, the Insurgency has fragmented once more, with some turning to piracy, and others attacking the Hegemony as an equally evil successor state.
+
+faction hullmod:
+- increased weapon recoil for each slot left empty
+- if no slots are empty, reduced recoil and increased projectile speed for each X OP worth of symmetrical weapons
+- some shield size/position adjustment to make shields tightly hug the ship outline
+
+gun gimmick:
+- mediocre accuracy and damage, high volume of fire
+- % chance for one of several doubling effects depending on the gun (ie, fire extra projectile, consume no ammo, double damage projectile) (rng protection?)
+
+missile gimmick:
+- stealing ARS's no forward-facing missile slots (but not the all-small missile part)
+
+faction hullmods
+- % chance to take % less armor damage (replaces heavy armor)
+- % chance to take % less shield damage (replaces hardened shields)
+- 3x armor hp, 1/3 armor effectiveness, more speed, more dissipation, no shields (replaces shield shunt/SO)
+- recursion amplifier; increases proc rate of all faction-related random effects
+
+Mount numbers are "total converging", could be mirrored broadside mounts or single centerline mounts depending on aesthetics.
+- heavy capital ("Mandelbrot"): 6 large ballistics (probably 3 centerline, 3 on each side) and 4(6?) medium missiles. Probably a defensive system.
+- light capital ("Sierpinski"): 1L/10S ballistic, 2 large missiles (roughly a slow conquest). Mobility system.
+- heavy cruiser ("Koch"): 1L/3M/4S ballistic, mix of small/med missiles (4s/2m? dominator equivalent.) Mobility system.
+- light cruiser ("Julia"): 2M/5S ballistic, 1 large missile. Probably a damage boost system; cheapish eradicator.
+- heavy destroyer ("Lyapunov"): 2M/4S ballistic 4 small missile. Defensive system.
+- light destroyer ("Menger"): 1M/3S ballistic, 1 medium missile. Light destroyer. Offensive system.
+- frigate ("Cantor"): 1M/3S ballistic, 2s missile. Defensive system.
+- frigate ("Heighway"): 5S ballistic, 2s missile.  Offensive system.
+
+
+Weapons. generally on the cheap end; rely on triggering their gimmick effect to keep up with DPS. names WIP. 
+gimmicks probably have a 15% trigger chance? dunno, will need testing to see what feels good
+small:
+- plasmatic pulse cannon: energy damage, poor accuracy. gimmick: refund flux cost
+- AM flak: good damage-per-hit HE flak weapon. Triple shot burst, mag fed. gimmick: extra shot
+- light impactor array: kinetic, low per hit, bad accuracy, flux efficient. lots of bullets. gimmick: extra shot
+medium:
+- triple PPC: triple-linked version of the small, mag fed with better burst. gimmick: refund flux cost
+- dual AM flak: second verse, same as the first. Twice as many shots, longer range. gimmick: extra shot
+- impactor array: larger version of the small.
+- dual blastcannon: HE, good per-hit, bad accuracy. gimmick: double damage projectile
+larges:
+- plasmatic repeater: somewhere between a mjolnir and an autopulse. accurate with good burst damage.
+- quad blastcannon: doubled up version of the medium. like if the HAG was good. gimmick: double damage
+- Magnetohydrodynamic Gun: okay-ish per-hit and rate of fire, mediocre efficiency and accuracy. 50% less affected by shield damage resistance. gimmick: chance to refund flux
+- Rotary AM flak: constant stream of HE flak. Flux-efficient but not particularly accurate.. gimmick: random extra projectile
+missiles: all missile gimmicks are "chance to not consume ammo". 
+smalls:
+- energy rocket pod: general use, fires pre-aimed energy/emp rockets. kinda energy annihilators.
+- shrieker AM torpedo: pre-aimed torpedo. A little less damage than a hammer, has some bonus frag on hit, one more in the mount.
+- gyrojet pod: fires self-aiming gyrojet rounds. Provides sustained kinetic damage instead of burst- generous ammo, great PD suppression. maybe reloads?
+mediums:
+- energy rockets; rapid small bursts
+- wailer MRM: frag with a little bit of armor strip. (or HE with extra frag? or HE + strip + frag?) very generous on the ammo, but fragile
+- gyrojet pod (bigger)
+larges
+- shrieker barrage: basically just a hammer barrage that can work in an off-bore mount.
+- wailer MRM again, big ol box launcher for them
+- something else? idk needs a third large but I haven't figured out what to put here yet
+- lamentation howitzer pod: it's casaba howitzer time
