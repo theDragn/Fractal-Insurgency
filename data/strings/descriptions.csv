@@ -1,0 +1,11 @@
+id,type,text1,text2,text3,notes
+# weapons,,,,,
+fractal_sppc,WEAPON,"A miniaturized howitzer weapon that fires large-caliber plasma-based shells. Like most Insurgency weapons, it relies on a built-in recursive causality device to improve its otherwise mediocre performance.
+
+The centerpiece of most of the Insurgency's in-house weapons and more advanced technology, recursive causality devices (RCDs) are capable of changing the dimensions of a volume of space. Typically, this is used to increase from the standard three spatial dimensions and one temporal dimension to 3.2 spatial dimensions and 1.04 temporal dimensions. This provides a theoretically limitless amount of self-similar space, matter, and energy, though extracting any of it requires repeated recursion through fractal dimensions. Doing so is heavily chance-based due to the underlying physical process, resulting in the random occurence of desired effects.",,,
+fractal_mppc,WEAPON,"A trio of linked cannons fed by a magazine of plasma-based shells. A built-in recursive causality device significantly improves its efficiency, though it still suffers from poor accuracy and a lack of specialization.
+
+While RCDs are perfectly safe as long as one doesn't enter the affected volume (recursive spacetime is rather unfriendly to complicated processing devices like brains), the Domain classified them as causality-violating devices millenia ago and banned them entirely. The Insurgency, of course, cared little for Domain restrictions, and happily used any banned technology they could get their hands on. Frequenly, this led to an unfortunate rebel finding out that the Domain occasionally banned technology for good reason. Today, the RCD is the only illegal tech still in use by the Insurgency, proven ""safe enough"" by millenia of use.",,,
+fractal_lppc,WEAPON,"A larger mount and more advanced stabilization systems allows this dual-mount PPC to deliver significant bursts of damage with improved accuracy and efficiency.
+
+One of the early self-produced Insurgency weapons, the Plasmatic Repeater was designed to replace the relatively impractical Mjolnir Cannon.",,,

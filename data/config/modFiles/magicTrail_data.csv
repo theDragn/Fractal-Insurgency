@@ -1,0 +1,15 @@
+trail,projectile,sprite,minLength,fadeIn,duration,fadeOut,sizeIn,sizeOut,colorIn,colorOut,opacity,textLength,textScroll,distance,dispersion,drift,fadeOnFadeOut,angleAdjustment,additive,velocityIn,velocityOut,randomVelocity,angle,rotationIn,rotationOut,randomRotation,renderBelowExplosions
+frac_ppc_core,fractal_ppc_shot,base_trail_smoke,10,0,0.1,0.15,18,3,"[72,70,255]","[128,0,128]",0.7,300,400,0,0,1,TRUE,FALSE,TRUE,0,0,0,0,100,100,TRUE,FALSE
+frac_ppc_edge,fractal_ppc_shot,base_trail_smoke,10,0.05,0.18,0.15,10,4,"[255,255,255]","[137,56,217]",0.5,300,-300,20,0,1,TRUE,FALSE,TRUE,10,30,0.2,0,100,100,TRUE,FALSE
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"# magiclib trails: base_trail_ + smooth, contrail, mild, fuzzy, rough, smoke, heavySmoke, heavyBurn, weave, aura, zap, zapWithCore",,,,,,,,,,,,,,,,,,,,,,,,,,,

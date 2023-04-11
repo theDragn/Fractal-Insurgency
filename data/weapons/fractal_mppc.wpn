@@ -23,9 +23,9 @@
 					   "particleSizeMin":7.0,
 					   "particleSizeRange":9.0,
 					   "particleDuration":0.15,
-					   "particleCount":11,
+					   "particleCount":0,
 					   "particleColor":[255,120,105,250]},
-	"projectileSpecId":"heavymg_shot",  # projectile that will be fired
+	"projectileSpecId":"fractal_ppc_shot",  # projectile that will be fired
 	#"fireSoundOne":"heavy_machinegun_intro",
 	"fireSoundTwo":"heavy_machinegun_fire",
 }
