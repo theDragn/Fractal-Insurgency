@@ -9,5 +9,6 @@ While RCDs are perfectly safe as long as one doesn't enter the affected volume (
 fractal_lppc,WEAPON,"A development of the Plasmatic Pulse Cannon, the Plasmatic Repeater's larger and heavier barrels provide pinpoint accuracy, eliminating the major weakness of its smaller cousins. The larger mount size provides additional room for autoloader machinery, improving the weapon's overall firepower.
 
 One of the early self-produced Insurgency weapons, the Plasmatic Repeater was designed to replace the relatively impractical Mjolnir Cannon.",,,
-fractal_sflak,WEAPON,"Fires a triple-shot burst of antimatter proximity shells. A built-in recursive causality device can divert an extra projectile out of fractal dimensions, though not particularly reliably.",,,
-fractal_mflak,WEAPON,A six-barreled flak cannon that fires antimatter proximity shells.,,,
+fractal_sflak,WEAPON,"Fires a triple-shot burst of antimatter proximity shells. The explosive and radiation effects of the antimatter shells provide excellent performance against fighters, though the mount's poor accuracy hampers its performance against maneuvering missiles.",,,
+fractal_mflak,WEAPON,"A multi-barreled flak cannon that fires antimatter proximity shells. Excels at producing a wall of flak explosions, but a low rate of fire and poor projectile velocity impede interception of individual maneuvering targets.",,,
+# fractal_lflak,WEAPON,A gas-operated rotary cannon that fires antimatter proximity shells. Requires a few shots to accelerate the barrel mechanism to maximum speed.,,,

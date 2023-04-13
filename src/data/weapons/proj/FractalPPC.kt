@@ -8,14 +8,15 @@ import com.fs.starfarer.api.util.Misc
 import data.plugins.FractalModPlugin.Companion.RECURSIVE_WEP_CHANCE
 import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
+import utils.FractalUtils.Companion.getChanceMult
 import java.awt.Color
 import kotlin.math.min
 
 class FractalPPC: OnFireEffectPlugin
 {
-    override fun onFire(proj: DamagingProjectileAPI?, weapon: WeaponAPI?, engine: CombatEngineAPI?)
+    override fun onFire(proj: DamagingProjectileAPI, weapon: WeaponAPI?, engine: CombatEngineAPI)
     {
-        if (proj == null || weapon == null || proj.source == null || engine == null) return
+        if (weapon == null || proj.source == null) return
         for (i in 1..Companion.MUZZLE_FLASH_NUM)
         {
             val vel = Vector2f()
@@ -28,7 +29,7 @@ class FractalPPC: OnFireEffectPlugin
                                   Companion.MUZZLE_FLASH_COLOR
             )
         }
-        if (Misc.random.nextFloat() <= RECURSIVE_WEP_CHANCE)
+        if (Misc.random.nextFloat() <= RECURSIVE_WEP_CHANCE * getChanceMult(weapon.ship.variant))
         {
             val fluxCost = weapon.fluxCostToFire / weapon.spec.burstSize
             val softFlux = proj.source.fluxTracker.currFlux - proj.source.fluxTracker.hardFlux
