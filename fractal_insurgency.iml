@@ -21,5 +21,39 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+          <root url="jar://$MODULE_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../MagicLib/jars/MagicLib-Kotlin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../MagicLib/jars/MagicLib-Kotlin.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../LazyLib/jars/LazyLib-Kotlin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../LazyLib/jars/LazyLib-Kotlin.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

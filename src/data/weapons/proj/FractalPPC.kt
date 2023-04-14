@@ -17,16 +17,19 @@ class FractalPPC: OnFireEffectPlugin
     override fun onFire(proj: DamagingProjectileAPI, weapon: WeaponAPI?, engine: CombatEngineAPI)
     {
         if (weapon == null || proj.source == null) return
-        for (i in 1..Companion.MUZZLE_FLASH_NUM)
+        for (i in 1..MUZZLE_FLASH_NUM)
         {
             val vel = Vector2f()
             val loc = Vector2f()
             vel.set(proj.velocity).scale(Misc.random.nextFloat() * 0.1f+0.1f)
             loc.set(proj.location)
             Vector2f.add(loc, MathUtils.getRandomPointOnCircumference(Misc.ZERO, 2f), loc)
-            engine.addHitParticle(loc, vel, Companion.MUZZLE_FLASH_SIZE,
-                                  Companion.MUZZLE_FLASH_BRIGHTNESS, Companion.MUZZLE_FLASH_DURATION,
-                                  Companion.MUZZLE_FLASH_COLOR
+            engine.addHitParticle(loc,
+                                  vel,
+                                  MUZZLE_FLASH_SIZE,
+                                  MUZZLE_FLASH_BRIGHTNESS,
+                                  MUZZLE_FLASH_DURATION,
+                                  MUZZLE_FLASH_COLOR
             )
         }
         if (Misc.random.nextFloat() <= RECURSIVE_WEP_CHANCE * getChanceMult(weapon.ship.variant))
