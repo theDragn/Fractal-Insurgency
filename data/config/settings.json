@@ -1,0 +1,15 @@
+{
+	"designTypeColors":{
+	  "Fractal Insurgency":[201, 114, 34,255]
+	},
+	"graphics": {
+    "blueprint_packages":{
+      #"fractal_bp_package":"graphics/icons/cargo/fractal_bp_package.png",
+    },	
+		"fx":{
+      "fractal_flak_puff":"graphics/fx/fractal_flak_puff.png",
+			"fractal_flak_fire":"graphics/fx/fractal_flak_fire.png"
+		}
+	}
+}
+

@@ -15,5 +15,10 @@ class FractalUtils
             if (ship.hasHullMod("fractal_chanceremove")) mult *= 0
             return mult
         }
+
+        fun lerp(p0: Float, p1: Float, t: Float): Float
+        {
+            return (1f - t)*p0 + t*p1
+        }
     }
 }

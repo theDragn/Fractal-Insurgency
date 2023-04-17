@@ -25,7 +25,7 @@
 					   "particleDuration":0.15,
 					   "particleCount":11,
 					   "particleColor":[255,120,105,250]},
-	"projectileSpecId":"lightmg_shot",  # projectile that will be fired
+	"projectileSpecId":"fractal_impactor_shot",  # projectile that will be fired
 	#"fireSoundOne":"heavy_machinegun_intro",
 	"fireSoundTwo":"light_machinegun_fire",
 }

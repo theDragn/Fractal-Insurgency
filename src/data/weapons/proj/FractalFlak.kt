@@ -12,7 +12,7 @@ class FractalFlak: OnFireEffectPlugin
 
     companion object
     {
-        val map = mapOf<WeaponSize, String>(
+        val map = mapOf(
             WeaponSize.SMALL to "fractal_sflak",
             WeaponSize.MEDIUM to "fractal_mflak",
             WeaponSize.LARGE to "fractal_lflak"
@@ -21,32 +21,35 @@ class FractalFlak: OnFireEffectPlugin
     }
     override fun onFire(proj: DamagingProjectileAPI, weapon: WeaponAPI?, engine: CombatEngineAPI)
     {
-        if (weapon == null || weapon.ship == null) return
+        weapon ?: return; weapon.ship ?: return
+        var newProj: DamagingProjectileAPI? = null
+        // extra projectile chance
+        if (Misc.random.nextFloat() <= FractalModPlugin.RECURSIVE_WEP_CHANCE * FractalUtils.getChanceMult(weapon.ship.variant))
+        {
+            // +/- 5 to 15 degrees
+            val angle = proj.facing + (Misc.random.nextFloat() - 0.5f) * weapon.currSpread
+            newProj = engine.spawnProjectile(
+                weapon.ship,
+                weapon,
+                map[weapon.size],
+                proj.location,
+                angle,
+                weapon.ship.velocity) as DamagingProjectileAPI
+
+        }
 
         // ensure plugin and add proj
         var plugin: FractalProjHandler? = engine.customData.get("fractalprojhandler") as? FractalProjHandler
         if (plugin is FractalProjHandler)
         {
             plugin.flakList.add(proj)
+            if (newProj != null) plugin.flakList.add(newProj)
         } else
         {
             plugin = FractalProjHandler(engine)
             engine.addPlugin(FractalProjHandler(engine))
             plugin.flakList.add(proj)
-        }
-        // extra projectile chance
-        if (Misc.random.nextFloat() <= FractalModPlugin.RECURSIVE_WEP_CHANCE * FractalUtils.getChanceMult(weapon.ship.variant))
-        {
-            // +/- 5 to 15 degrees
-            val angle = proj.facing + Misc.random.nextFloat() * 20 - 10 + (if (Misc.random.nextBoolean()) -5 else 5)
-            val newProj = engine.spawnProjectile(
-                weapon.ship,
-                weapon,
-                map.get(weapon.size),
-                proj.location,
-                angle,
-                weapon.ship.velocity)
-
+            if (newProj != null) plugin.flakList.add(newProj)
         }
     }
 }

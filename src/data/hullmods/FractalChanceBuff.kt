@@ -17,7 +17,7 @@ class FractalChanceBuff: BaseHullMod()
         return when (index)
         {
             0 -> "Doubles"
-            1 -> (WEAPON_FLUX_MULT * 100f - 100f).toInt().toString()
+            1 -> (WEAPON_FLUX_MULT * 100f - 100f).toInt().toString() + "%"
             else -> "oops"
         }
     }
