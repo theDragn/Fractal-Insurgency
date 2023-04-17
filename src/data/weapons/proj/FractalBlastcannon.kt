@@ -29,5 +29,7 @@ class FractalBlastcannon: OnFireEffectPlugin
             engine.spawnProjectile(proj.source, weapon, "fractal_blast_charged", proj.location, proj.facing, proj.source.velocity)
             engine.removeEntity(proj)
         }
+
+        // TODO: smoke vfx
     }
 }

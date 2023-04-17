@@ -51,6 +51,8 @@ class FractalFlak: OnFireEffectPlugin
             plugin.flakList.add(proj)
             if (newProj != null) plugin.flakList.add(newProj)
         }
+
+        // TODO: smoke vfx?
     }
 }
 
