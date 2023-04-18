@@ -1,0 +1,196 @@
+{
+  "hullName": "Lyapunov",
+  "hullId": "fractal_lyapunov",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fractal_lyapunov.png",
+  "style": "LOW_TECH",
+  "height": 249,
+  "width": 117,
+  "center": [58.5, 124.5],
+  "collisionRadius": 121.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 126,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -90,
+      "locations": [2, -13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 90,
+      "locations": [2, 13]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -90,
+      "locations": [40, -13]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 90,
+      "locations": [40, 13]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -90,
+      "locations": [21, -13]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 90,
+      "locations": [21, 13]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -90,
+      "locations": [-25.5, -25]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 90,
+      "locations": [-25.5, 25]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 228,
+      "angle": 180,
+      "locations": [-52, -0]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [80, 14.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [80, -14.5]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [64.5, -15]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [64.5, 15]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-25, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-116.5, -17],
+      "length": 34.827576,
+      "width": 14.736334,
+      "angle": -168.5,
+      "contrailSize": 14.736334,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-116.5, 17],
+      "length": 34.827576,
+      "width": 14.736334,
+      "angle": 168.5,
+      "contrailSize": 14.736334,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-104, -32],
+      "length": 35.003731,
+      "width": 12.528194,
+      "angle": -162.5,
+      "contrailSize": 12.528194,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-104, 32],
+      "length": 35.003731,
+      "width": 12.528194,
+      "angle": 162.5,
+      "contrailSize": 12.528194,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -118, 26.5,
+    -94.5, 40,
+    -56.5, 34,
+    -36.5, 46,
+    -20.5, 48.5,
+    0.5, 34,
+    96, 22.5,
+    89, 8.5,
+    114, 7.5,
+    114, -7.5,
+    89, -8.5,
+    96, -22.5,
+    0.5, -34,
+    -20.5, -48.5,
+    -36.5, -46,
+    -56.5, -34,
+    -94.5, -40,
+    -118, -26.5
+  ]
+}
