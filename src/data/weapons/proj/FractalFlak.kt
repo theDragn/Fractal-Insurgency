@@ -4,6 +4,7 @@ import FractalProjHandler
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize
 import com.fs.starfarer.api.util.Misc
+import data.hullmods.FractalChanceBuff
 import data.plugins.FractalModPlugin
 import utils.FractalUtils
 
@@ -37,7 +38,9 @@ class FractalFlak: OnFireEffectPlugin
                 weapon.ship.velocity) as DamagingProjectileAPI
 
         }
-
+        // flux cost from recursive amplifier
+        if (weapon.ship.variant.hasHullMod("fractal_chancebuff"))
+            weapon.ship.fluxTracker.increaseFlux((weapon.fluxCostToFire / weapon.spec.burstSize) * (FractalChanceBuff.WEAPON_FLUX_MULT - 1f), false)
         // ensure plugin and add proj
         var plugin: FractalProjHandler? = engine.customData.get("fractalprojhandler") as? FractalProjHandler
         if (plugin is FractalProjHandler)

@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI
 import com.fs.starfarer.api.combat.OnFireEffectPlugin
 import com.fs.starfarer.api.combat.WeaponAPI
 import com.fs.starfarer.api.util.Misc
+import data.hullmods.FractalChanceBuff
 import data.plugins.FractalModPlugin.Companion.RECURSIVE_WEP_CHANCE
 import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
@@ -32,11 +33,15 @@ class FractalPPC: OnFireEffectPlugin
                                   MUZZLE_FLASH_COLOR
             )
         }
+        // flux cost from recursive amplifier
+        if (weapon.ship.variant.hasHullMod("fractal_chancebuff"))
+            weapon.ship.fluxTracker.increaseFlux((weapon.fluxCostToFire / weapon.spec.burstSize) * (FractalChanceBuff.WEAPON_FLUX_MULT - 1f), false)
         if (Misc.random.nextFloat() <= RECURSIVE_WEP_CHANCE * getChanceMult(weapon.ship.variant))
         {
             val fluxCost = weapon.fluxCostToFire / weapon.spec.burstSize
             val softFlux = proj.source.fluxTracker.currFlux - proj.source.fluxTracker.hardFlux
             proj.source.fluxTracker.decreaseFlux(min(fluxCost, softFlux))
+            weapon.ammo += 1
         }
     }
 
