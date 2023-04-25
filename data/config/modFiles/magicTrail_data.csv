@@ -12,6 +12,6 @@ frac_cblast_fire,fractal_blast_shot_charged,base_trail_smooth,10,0.05,0,0.5,15,4
 frac_cblast_coretrail,fractal_blast_shot_charged,base_trail_smooth,10,0.05,0.25,0.5,7,3,"[255,255,255]","[128,128,128]",0.4,300,-300,20,10,1,TRUE,FALSE,TRUE,0,20,0.33,0,0,30,TRUE,FALSE
 frac_cblast_smoke,fractal_blast_shot_charged,base_trail_heavySmoke,10,0.05,0.5,0.5,10,3,"[172,172,172]","[80,80,80]",0.4,300,-300,20,10,1,TRUE,FALSE,TRUE,0,20,0.33,0,0,30,TRUE,FALSE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
+# MHD,,,,,,,,,,,,,,,,,,,,,,,,,,,
+frac_mhd,fractal_mhd_shot,base_trail_contrail,5,0.05,0.25,0.25,4,30,"[255,255,255]","[80,80,80]",0.7,300,-300,20,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,FALSE
 "# magiclib trails: base_trail_ + smooth, contrail, mild, fuzzy, rough, smoke, heavySmoke, heavyBurn, weave, aura, zap, zapWithCore",,,,,,,,,,,,,,,,,,,,,,,,,,,

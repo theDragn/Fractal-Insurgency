@@ -6,7 +6,7 @@
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
 	"onFireEffect":"data.weapons.proj.FractalBlastcannon",
 	"length":25.0,
-	"hitGlowRadius":100,
+	"hitGlowRadius":50,
 	"width":5.0,
 	"fadeTime":0.5,
 	"fringeColor":[255,120,30,175],

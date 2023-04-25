@@ -10,7 +10,7 @@ import utils.FractalGenericMuzzleFlash
 import utils.FractalUtils
 import java.awt.Color
 
-class FractalBlastcannon: FractalGenericMuzzleFlash()
+class FractalBlastcannon: FractalGenericMuzzleFlash(), OnFireEffectPlugin
 {
     // commented stuff is
     //var lastProj: DamagingProjectileAPI? = null
@@ -18,7 +18,7 @@ class FractalBlastcannon: FractalGenericMuzzleFlash()
     override fun onFire(proj: DamagingProjectileAPI?, weapon: WeaponAPI?, engine: CombatEngineAPI?)
     {
         proj ?: return; weapon ?: return; engine ?: return
-        super.onFire(proj, weapon, engine)
+        super.spawnSmoke(proj, weapon, engine)
         /*if (adjust && lastProj is DamagingProjectileAPI)
         {
             proj.facing = lastProj!!.facing

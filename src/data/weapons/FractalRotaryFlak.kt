@@ -18,7 +18,7 @@ class FractalRotaryFlak: EveryFrameWeaponEffectPlugin, OnFireEffectPlugin
         {
             fired = false
             val baseCooldown = weapon.cooldown
-            modifiedCooldown = baseCooldown + (baseCooldown * spool)
+            modifiedCooldown = baseCooldown + (baseCooldown * spool/5f)
             modifiedCooldownLeft = modifiedCooldown
         }
         if (modifiedCooldownLeft > 0)
@@ -41,6 +41,6 @@ class FractalRotaryFlak: EveryFrameWeaponEffectPlugin, OnFireEffectPlugin
     override fun onFire(projectile: DamagingProjectileAPI, weapon: WeaponAPI, engine: CombatEngineAPI)
     {
         fired = true
-        spool = max(spool - 1f * weapon.ship.mutableStats.ballisticRoFMult.modifiedValue, 0f)
+        spool = max(spool - 2f * weapon.ship.mutableStats.ballisticRoFMult.modifiedValue, 0f)
     }
 }

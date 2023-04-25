@@ -12,16 +12,16 @@ import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
 // an adaptation of Nicke's muzzle flash script, as an extensible kotlin class
-// only does OnFire particles, in the interest of efficiency
-open class FractalGenericMuzzleFlash: OnFireEffectPlugin
+// can call this for whatever you want, really
+open class FractalGenericMuzzleFlash
 {
-    override fun onFire(proj: DamagingProjectileAPI?, weapon: WeaponAPI?, engine: CombatEngineAPI?)
+    fun spawnSmoke(proj: DamagingProjectileAPI?, weapon: WeaponAPI?, engine: CombatEngineAPI?)
     {
         proj ?: return; weapon ?: return; engine ?: return; proj.source ?: return
         for (ID in USED_IDS)
         {
             val cullDist = PARTICLE_CULL_DISTANCE[ID] ?: 600f
-            if (!engine.getViewport().isNearViewport(weapon.getLocation(), cullDist)) return
+            if (!engine.viewport.isNearViewport(weapon.location, cullDist)) return
             val spawnOffset = SPAWN_OFFSET[ID] ?: Vector2f(0f, 0f)
             val type = PARTICLE_TYPE[ID] ?: "SMOKE"
             val color = PARTICLE_COLOR[ID] ?: Color(128,128,128,128)
@@ -46,6 +46,55 @@ open class FractalGenericMuzzleFlash: OnFireEffectPlugin
                 val spawnLoc = MathUtils.getPointOnCircumference(startLoc, extraDist, facing)
                 val randVel = MathUtils.getRandomNumberInRange(velMin, velMax)
                 val velocity = MathUtils.getPointOnCircumference(Misc.ZERO, randVel, facing) + proj.source.velocity
+                val size = MathUtils.getRandomNumberInRange(sizeMin, sizeMax)
+                val duration = MathUtils.getRandomNumberInRange(durMin, durMax)
+                when (type)
+                {
+                    "SMOOTH" -> engine.addSmoothParticle(spawnLoc, velocity, size, 1f, duration, color)
+                    "HIT" -> engine.addHitParticle(spawnLoc, velocity, size, 1f, duration, color)
+                    "SMOKE" -> engine.addSmokeParticle(spawnLoc, velocity, size, 1f, duration, color)
+                    "NEBULA" -> engine.addNebulaParticle(spawnLoc, velocity, size, 1f, 1f, 1f, duration, color)
+                    "SWIRLY_NEBULA" -> engine.addSwirlyNebulaParticle(spawnLoc, velocity, size, 1f, 1f, 1f, duration, color, false)
+                    "NEGATIVE_NEBULA" -> engine.addNegativeNebulaParticle(spawnLoc, velocity, size, 1f, 1f, 1f, duration, color)
+                    "NEGATIVE_SWIRLY_NEBULA" -> engine.addNegativeSwirlyNebulaParticle(spawnLoc, velocity, size, 1f, 1f, 1f, duration, color)
+                }
+            }
+
+        }
+    }
+    // for when you want the muzzle flash without a proj (or weird spawn conditions)
+    fun spawnSmoke(loc: Vector2f?, facing: Float?, engine: CombatEngineAPI?, baseVel: Vector2f?)
+    {
+        loc ?: return; facing ?: return; engine ?: return
+
+        for (ID in USED_IDS)
+        {
+            val cullDist = PARTICLE_CULL_DISTANCE[ID] ?: 600f
+            if (!engine.viewport.isNearViewport(loc, cullDist)) return
+            val spawnOffset = SPAWN_OFFSET[ID] ?: Vector2f(0f, 0f)
+            val type = PARTICLE_TYPE[ID] ?: "SMOKE"
+            val color = PARTICLE_COLOR[ID] ?: Color(128,128,128,128)
+            val sizeMin = PARTICLE_SIZE_MIN[ID] ?: 5f
+            val sizeMax = PARTICLE_SIZE_MAX[ID] ?: 20f
+            val velMin = PARTICLE_VELOCITY_MIN[ID] ?: 0f
+            val velMax = PARTICLE_VELOCITY_MAX[ID] ?: 40f
+            val arc = PARTICLE_ARC[ID] ?: 0f
+            val durMin = PARTICLE_DURATION_MIN[ID] ?: 1.5f
+            val durMax = PARTICLE_DURATION_MAX[ID] ?: 2f
+            val offsetMin = PARTICLE_OFFSET_MIN[ID] ?: 0f
+            val offsetMax = PARTICLE_OFFSET_MAX[ID] ?: 40f
+            val numParticles = PARTICLE_COUNT[ID] ?: 15
+
+            val startLoc = spawnOffset.rotate(facing) + loc
+            val startFacing = facing
+
+            for (i in 1..numParticles)
+            {
+                val facing = startFacing + MathUtils.getRandomNumberInRange(-arc/2f, arc/2f)
+                val extraDist = MathUtils.getRandomNumberInRange(offsetMin, offsetMax)
+                val spawnLoc = MathUtils.getPointOnCircumference(startLoc, extraDist, facing)
+                val randVel = MathUtils.getRandomNumberInRange(velMin, velMax)
+                val velocity = MathUtils.getPointOnCircumference(Misc.ZERO, randVel, facing) + (baseVel ?: Misc.ZERO)
                 val size = MathUtils.getRandomNumberInRange(sizeMin, sizeMax)
                 val duration = MathUtils.getRandomNumberInRange(durMin, durMax)
                 when (type)
