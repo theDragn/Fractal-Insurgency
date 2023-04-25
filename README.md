@@ -12,7 +12,6 @@ A very early in-development Starsector mod. Updates will get here when they get 
 - Lamentation Howitzer: Figure out mechanics.
 
 ### Weapon VFX
-- Blastcannon: onFire smoke
 - MHD: onHit splash/spray particles
 - PPCs: tweak onFire vfx
 - Lamentation Howitzer
@@ -34,8 +33,6 @@ A very early in-development Starsector mod. Updates will get here when they get 
 ## JSON/CSV Tasks
 ### Weapons
 - Missile stats/.wpn/.proj
-- Blastcannon trail
-- Tweak PPC trail (blue -> purple?)
 - AM Flak: fiddle with projectile appearance (small ball of AM? trail?)
 - Impactors: proj color/size, trail?
 - MHD: trail!
@@ -46,7 +43,6 @@ A very early in-development Starsector mod. Updates will get here when they get 
 ### Campaign Layer
 - Reverse Tax Collector rules.csv
 - Help with Raid rules.csv
-- figure out faction tech color
 
 ## Sprites
 - all weapons
