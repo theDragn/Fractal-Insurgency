@@ -55,6 +55,9 @@ Shrieker Repeater,fractal_shrieker_l,,,500,1200,,1000,,40,20,22,24,,,HIGH_EXPLOS
 # Lamentation Howitzer Pod,,,,1500,2500,,4000,4000,,20,28,10,,,ENERGY,,,,10,,,,,,,,325,50,12,300,,,"DO_NOT_AIM, MISSILE_SPREAD",fractal_bp,,Fractal Insurgency,,Finisher,Slow,Good,,,"%s: %s chance to not consume ammo.
 
 Detonates at standoff distance, producing a cone of nuclear plasma.",Recursive Magazine | 15%,ECCM reduces the detonation cone angle.,,,
+Lamentation Kinetic Torpedo,,,,2000,2000,,2000,2000,100,20,27,20,,,KINETIC,,,,9.75,2,0.25,,,,,,300,50,10,600,,,DO_NOT_AIM,fractal_bp,,Fractal Insurgency,,Torpedo,Medium,Good,,,"%s: %s chance to not consume ammo.
+
+%s: For every %s damage the torpedo takes, a piece of shrapnel that deals %s kinetic and %s EMP damage breaks off.",Recursive Magazine | 15% | Frangible Warhead | 100 | 150 | 150,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Lost Technology,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Nuclear Particle Beam (Orion Federation),,,,,"ballistic slot HE beam, kinda plasma driver-ish. Medium. Counts as ballistic.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
